@@ -245,7 +245,6 @@ int main() {
         
     }
     
->>>>>>> 336af557e01e25429b5bf1a98b16da8a9ac14ac8
     printf("\nThank you, %s. Your booking details have been recorded.\n", name);
 
     printf("\n=================================\n");
