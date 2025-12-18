@@ -115,7 +115,7 @@ int main() {
         printf("1. New York to London => Time: 10:00 AM - 12:00 PM\n");
         printf("2. India to Tokyo => Time: 11:30 AM - 1:30 PM\n");
         printf("3. Chicago to India => Time: 2:45 PM - 4:45 PM\n");
-        printf("Enter your desinestion To & From");
+        printf("\nEnter your desinestion To & From (1-3): ");
         scanf("%d", &location);
         if(location == 1){
             printf("\nYour Flight is from New York to London at 10:00 AM ");
