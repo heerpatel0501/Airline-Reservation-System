@@ -1,6 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <code>
+        #include <stdio.h>
+        #include <stdlib.h>
+        #include <string.h>
 
 int main() {
     int flightType;
@@ -79,10 +88,10 @@ int main() {
 
     printf("Our Flight Seats Types are as follows:\n");
     int seatType;
-    printf("1. Economy Class  => Affordable and comfortable seating => price: $100\n");
-    printf("2. Business Class => Enhanced comfort and services => price: $200\n");
-    printf("3. First Class => Premium luxury and privacy => price: $300\n");
-    printf("4. Premium Class => Exclusive amenities and services => price: $400\n");
+    printf("1. Economy Class\n");
+    printf("2. Business Class\n");
+    printf("3. First Class\n");
+    printf("4. Premium Class\n");
     printf("Enter your Seat Type (1-4): ");
     scanf("%d", &seatType);
     switch (seatType) {
@@ -99,46 +108,22 @@ int main() {
             printf("\nYou selected PREMIUM CLASS.\n");
             break;
         default:
-            printf("\nInvalid choice! Please Choice From 1 to 4.\n");
-            break;
-    }
-    printf("\n=================================\n");
-
-    printf("Select Your Seat preference:\n");
-    int seatPref;
-    printf("1. Window Seat => Cost for Window Seat = $50\n");
-    printf("2. Aisle Seat => Cost for Aisle Seat = $40\n");
-    printf("3. Middle Seat => Cost for Middle Seat = $30\n");
-    printf("4.Exit Row Seat => Cost for Exit Row Seat = $60\n");
-    printf("Enter your Seat Preference (1-4): ");
-    scanf("%d", &seatPref);
-    switch (seatPref) {
-        case 1:
-            printf("\nYou selected WINDOW SEAT.\n");
-            break;
-        case 2:
-            printf("\nYou selected AISLE SEAT.\n");
-            break;
-        case 3:
-            printf("\nYou selected MIDDLE SEAT.\n");
-            break;
-        case 4:
-            printf("\nYou selected EXIT ROW SEAT.\n");
-            break;
-        default:
-            printf("\nInvalid choice! Please Choice From 1 to 4.\n");
+            printf("\nInvalid choice! Please restart the program.\n");
             break;
     }
 
-    printf("=================================\n");
-    int totalBillofTicket = 0;
-    totalBillofTicket += (seatType == 1) ? 100 : (seatType == 2) ? 200 : (seatType == 3) ? 300 : (seatType == 4) ? 400 : 0;
-    totalBillofTicket += (seatPref == 1) ? 50 : (seatPref == 2) ? 40 : (seatPref == 3) ? 30 : (seatPref == 4) ? 60 : 0;
-    printf("\n Your Total Ticket Amount is $%d\n", totalBillofTicket);
 
-    printf("=================================\n");
 
-    printf("\nPassenger Details Collection\n");
+
+
+
+
+
+
+
+
+
+    printf("Enter your details to proceed with booking.\n");
 
     char name[50];
     printf("\nEnter Name: ");
@@ -196,9 +181,18 @@ int main() {
 
     printf("\n=================================\n");
 
+   
+    
     printf("\nThank you, %s. Your booking details have been recorded.\n", name);
 
     printf("\n=================================\n");
 
+
     return 0;
 }
+    </stdio.h>
+    </stdlib.h>
+    </string.h>
+    </code>
+</body>
+</html>
