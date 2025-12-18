@@ -138,6 +138,49 @@ int main() {
 
     printf("=================================\n");
 
+    printf("AERONOVA SEATING ARRANGEMENT\n");
+    printf("============================\n\n");
+
+    int i;
+    printf("First Class Seats (F1 - F12):\n");
+    for(i = 1; i <= 12; i++)
+    {
+        printf("F%d\t", i);
+        if(i % 4 == 0)
+            printf("\n");
+    }
+
+    printf("\n");
+
+    printf("Business Class Seats (B1 - B35):\n");
+    for(i = 1; i <= 35; i++)
+    {
+        printf("B%d\t", i);
+        if(i % 5 == 0)
+            printf("\n");
+    }
+
+    printf("\n");
+
+    printf("Premium Economy Seats (P1 - P30):\n");
+    for(i = 1; i <= 30; i++)
+    {
+        printf("P%d\t", i);
+        if(i % 6 == 0)
+            printf("\n");
+    }
+
+    printf("\n");
+
+    printf("Economy Class Seats (E1 - E250):\n");
+    for(i = 1; i <= 250; i++)
+    {
+        printf("E%d\t", i);
+        if(i % 10 == 0)
+            printf("\n");
+    }
+    printf("\n=================================\n");
+
     printf("\nPassenger Details Collection\n");
 
     char name[50];
@@ -217,33 +260,32 @@ int main() {
 
         if (mealChoice == 1) {
         printf("\n===== FOOD MENU =====\n");
-        printf("1. Upma        - Rs. 300\n");
-        printf("2. Samosa      - Rs. 200\n");
-        printf("3. Sandwich    - Rs. 390\n");
-        printf("4. Cup Noodles - Rs. 340\n");
-        printf("5. Aeronova Special    - Rs. 500\n");
-
+        printf("1. Upma        - $ 30\n");
+        printf("2. Samosa      - $ 20\n");
+        printf("3. Sandwich    - $ 30\n");
+        printf("4. Cup Noodles - $ 30\n");
+        printf("5. Aeronova Special    - $ 50\n");
         printf("Enter food choice: ");
         scanf("%d", &food);
 
         if (food == 1) {
-            foodPrice = 300;
+            foodPrice = 30;
             printf("Food selected: Upma\n");
         }
         else if (food == 2) {
-            foodPrice = 200;
+            foodPrice = 20;
             printf("Food selected: Samosa\n");
         }
         else if (food == 3) {
-            foodPrice = 390;
+            foodPrice = 30;
             printf("Food selected: Sandwich\n");
         }
         else if (food == 4) {
-            foodPrice = 340;
+            foodPrice = 30;
             printf("Food selected: Cup Noodles\n");
         }
         else if (food == 5) {
-            foodPrice = 500;
+            foodPrice = 50;
             printf("Food selected: Aeronova Special\n");
         }
         else {
@@ -254,33 +296,32 @@ int main() {
         totalFood=foodPrice*foodQty;
 
         printf("\n===== BEVERAGES MENU =====\n");
-        printf("1. Water        - Rs. 110\n");
-        printf("2. Tea          - Rs. 130\n");
-        printf("3. Coffee       - Rs. 200\n");
-        printf("4. Cold Drink   - Rs. 250\n");
-        printf("5. Juice        - Rs. 90\n");
-
+        printf("1. Water        - $ 10\n");
+        printf("2. Tea          - $ 10\n");
+        printf("3. Coffee       - $ 20\n");
+        printf("4. Cold Drink   - $ 20\n");
+        printf("5. Juice        - $ 9\n");
         printf("Enter beverage choice: ");
         scanf("%d", &drink);
 
         if (drink == 1) {
-            drinkPrice = 110;
+            drinkPrice = 10;
             printf("Beverage selected: Tea\n");
         }
         else if (drink == 2) {
-            drinkPrice = 130;
+            drinkPrice = 10;
             printf("Beverage selected: Coffee\n");
         }
         else if (drink == 3) {
-            drinkPrice = 200;
+            drinkPrice = 20;
             printf("Beverage selected: Cold Drink\n");
         }
         else if (drink == 4) {
-            drinkPrice = 250;
+            drinkPrice = 20;
             printf("Beverage selected: Juice\n");
         }
         else if (drink == 5) {
-            drinkPrice = 90;
+            drinkPrice = 9;
             printf("Beverage selected: Water\n");
         }
         else {
@@ -293,14 +334,14 @@ int main() {
         grandTotal = (totalFood + totalDrink)- (totalFood+totalDrink);
 
         printf("\n===== BILL DETAILS =====\n");
-        printf("Food Price     : Rs. %d\n", totalFood);
-        printf("Beverage Price : Rs. %d\n", totalDrink);
+        printf("Food Price     : $ %d\n", totalFood);
+        printf("Beverage Price : $ %d\n", totalDrink);
         printf("-------------------------\n");
-        printf("Total Bill (Free meal on internation flights)    : Rs. %d\n", grandTotal);
+        printf("Total Bill : $ %d\n", grandTotal);
     }
 
     else if (mealChoice == 2) {
-        printf("No meal selected. Grand Bill: Rs. 0");
+        printf("No meal selected. Grand Bill: $ 0");
     }
 
     else {
@@ -318,33 +359,32 @@ int main() {
 
     if (mealChoice == 1) {
         printf("\n===== FOOD MENU =====\n");
-        printf("1. Upma        - Rs. 300\n");
-        printf("2. Samosa      - Rs. 200\n");
-        printf("3. Sandwich    - Rs. 390\n");
-        printf("4. Cup Noodles - Rs. 340\n");
-        printf("5. Aeronova Special    - Rs. 500\n");
-
+        printf("1. Upma        - $ 30\n");
+        printf("2. Samosa      - $ 20\n");
+        printf("3. Sandwich    - $ 30\n");
+        printf("4. Cup Noodles - $ 30\n");
+        printf("5. Aeronova Special    - $ 50\n");
         printf("Enter food choice: ");
         scanf("%d", &food);
 
         if (food == 1) {
-            foodPrice = 300;
+            foodPrice = 30;
             printf("Food selected: Upma\n");
         }
         else if (food == 2) {
-            foodPrice = 200;
+            foodPrice = 20;
             printf("Food selected: Samosa\n");
         }
         else if (food == 3) {
-            foodPrice = 390;
+            foodPrice = 30;
             printf("Food selected: Sandwich\n");
         }
         else if (food == 4) {
-            foodPrice = 340;
+            foodPrice = 30;
             printf("Food selected: Cup Noodles\n");
         }
         else if (food == 5) {
-            foodPrice = 500;
+            foodPrice = 50;
             printf("Food selected: Aeronova Special\n");
         }
         else {
@@ -355,33 +395,32 @@ int main() {
         totalFood=foodPrice*foodQty;
 
         printf("\n===== BEVERAGES MENU =====\n");
-        printf("1. Water        - Rs. 110\n");
-        printf("2. Tea          - Rs. 130\n");
-        printf("3. Coffee       - Rs. 200\n");
-        printf("4. Cold Drink   - Rs. 250\n");
-        printf("5. Juice        - Rs. 90\n");
-
+        printf("1. Water        - $. 10\n");
+        printf("2. Tea          - $. 30\n");
+        printf("3. Coffee       - $. 20\n");
+        printf("4. Cold Drink   - $. 20\n");
+        printf("5. Juice        - $. 9\n");
         printf("Enter beverage choice: ");
         scanf("%d", &drink);
 
         if (drink == 1) {
-            drinkPrice = 110;
+            drinkPrice = 10;
             printf("Beverage selected: Water\n");
         }
         else if (drink == 2) {
-            drinkPrice = 130;
+            drinkPrice = 30;
             printf("Beverage selected: Tea\n");
         }
         else if (drink == 3) {
-            drinkPrice = 200;
+            drinkPrice = 20;
             printf("Beverage selected: Coffee\n");
         }
         else if (drink == 4) {
-            drinkPrice = 250;
+            drinkPrice = 20;
             printf("Beverage selected: Cold Drink\n");
         }
         else if (drink == 5) {
-            drinkPrice = 90;
+            drinkPrice = 9;
             printf("Beverage selected: Juice\n");
         }
         else {
@@ -394,20 +433,24 @@ int main() {
         grandTotal = (totalFood + totalDrink)- (totalFood+totalDrink);
 
         printf("\n===== BILL DETAILS =====\n");
-        printf("Food Price     : Rs. %d\n", totalFood);
-        printf("Beverage Price : Rs. %d\n", totalDrink);
+        printf("Food Price     : $ %d\n", totalFood);
+        printf("Beverage Price : $ %d\n", totalDrink);
         printf("-------------------------\n");
-        printf("Total Bill (Free meal on internation flights)    : Rs. %d\n", grandTotal);
+        printf("Total Bill (Free meal on internation flights)    : $ %d\n", grandTotal);
     }
 
     else if (mealChoice == 2) {
-        printf("No meal selected. Grand Bill: Rs. 0");
+        printf("No meal selected. Grand Bill: $ 0");
     }
 
     else {
         printf("Invalid choice!");
     }
     }
+
+    printf("\n=================================\n");
+    int finalAmount = totalBillofTicket + grandTotal;
+    printf("Your Final Bill Amount is : $ %d\n", finalAmount);
 
     return 0;
 }
