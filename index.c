@@ -154,9 +154,9 @@ int main() {
         printf("\nEnter your age: ");
         scanf("%d", &age);
 
-    if (age < 0 || age >= 120) {
-        printf("\nInvalid age! Please enter a valid age (0-119).\n");
-    }
+        if (age < 0 || age >= 120) {
+            printf("\nInvalid age! Please enter a valid age (0-119).\n");
+        }
 
 } while (age < 0 || age >= 120);
     
@@ -193,62 +193,218 @@ int main() {
             }
         } while (strlen(passport) < 6 || strlen(passport) > 9);
     }
-
     printf("\n=================================\n");
 
-<<<<<<< HEAD
-=======
-    printf("\nOur Fligts are as follows:\n");
-    int location;
-    if (flightType == 1) {
-        printf("1. Ahemdabad to Indore => Time: 2:00 PM - 4:00 PM\n");
-        printf("2. Delhi to Mumbai => Time: 3:30 PM - 5:30 PM\n");
-        printf("3. Goa to Bangolore => Time: 4:15 PM - 6:15 PM\n");
-        printf("Enter your desinestion To & From");
-        scanf("%d", &location);
-        if(location == 1){
-            printf("\nYour Flight is from Ahemdabad to Indore at 2:00 PM ");
-        }
-        else if (location == 2)
-        {
-            printf("\nYour Flight is from Delhi to Mumbai at 3:30 PM");
-        }
-        else if (location == 3)
-        {
-            printf("\nYour Flight is from Goa to Bangolore at 4:15 PM");
-        }
-        else{
-            printf("\nInvalid choice, Only Three Flight Avaliable");
-        }
-
-        
-    } else if (flightType == 2) {
-        printf("1. New York to London => Time: 10:00 AM - 12:00 PM\n");
-        printf("2. India to Tokyo => Time: 11:30 AM - 1:30 PM\n");
-        printf("3. Chicago to India => Time: 2:45 PM - 4:45 PM\n");
-        printf("\nEnter your desinestion To & From (1-3): ");
-        scanf("%d", &location);
-        if(location == 1){
-            printf("\nYour Flight is from New York to London at 10:00 AM ");
-        }
-        else if (location == 2)
-        {
-            printf("\nYour Flight is from India to Tokyo at 11:30 AM");
-        }
-        else if (location == 3)
-        {
-            printf("\nYour  Flight is from Chicago to India at 2:45 PM");
-        }
-        else{
-            printf("\nInvalid choice, Only Three Flight Avaliable");
-        }
-        
-    }
-    
->>>>>>> 336af557e01e25429b5bf1a98b16da8a9ac14ac8
     printf("\nThank you, %s. Your booking details have been recorded.\n", name);
 
     printf("\n=================================\n");
+
+    int mealChoice, food, drink;
+    int foodQty,drinkQty;
+    int foodPrice = 0, drinkPrice = 0;
+    int totalFood,totalDrink,grandTotal;
+
+    if(flightType == 1){
+        printf("Do you want to select a flight meal?\n");
+        printf("1. Yes\n");
+
+        printf("2. No\n");
+        printf("Enter your choice: ");
+        scanf("%d", &mealChoice);
+
+        if (mealChoice == 1) {
+        printf("\n===== FOOD MENU =====\n");
+        printf("1. Upma        - Rs. 300\n");
+        printf("2. Samosa      - Rs. 200\n");
+        printf("3. Sandwich    - Rs. 390\n");
+        printf("4. Cup Noodles - Rs. 340\n");
+        printf("5. Aeronova Special    - Rs. 500\n");
+
+        printf("Enter food choice: ");
+        scanf("%d", &food);
+
+        if (food == 1) {
+            foodPrice = 300;
+            printf("Food selected: Upma\n");
+        }
+        else if (food == 2) {
+            foodPrice = 200;
+            printf("Food selected: Samosa\n");
+        }
+        else if (food == 3) {
+            foodPrice = 390;
+            printf("Food selected: Sandwich\n");
+        }
+        else if (food == 4) {
+            foodPrice = 340;
+            printf("Food selected: Cup Noodles\n");
+        }
+        else if (food == 5) {
+            foodPrice = 500;
+            printf("Food selected: Aeronova Special\n");
+        }
+        else {
+            printf("Invalid food choice\n");
+        }
+        printf("Enter Food quantity:");
+        scanf("%d",&foodQty);
+        totalFood=foodPrice*foodQty;
+
+        printf("\n===== BEVERAGES MENU =====\n");
+        printf("1. Water        - Rs. 110\n");
+        printf("2. Tea          - Rs. 130\n");
+        printf("3. Coffee       - Rs. 200\n");
+        printf("4. Cold Drink   - Rs. 250\n");
+        printf("5. Juice        - Rs. 90\n");
+
+        printf("Enter beverage choice: ");
+        scanf("%d", &drink);
+
+        if (drink == 1) {
+            drinkPrice = 110;
+            printf("Beverage selected: Tea\n");
+        }
+        else if (drink == 2) {
+            drinkPrice = 130;
+            printf("Beverage selected: Coffee\n");
+        }
+        else if (drink == 3) {
+            drinkPrice = 200;
+            printf("Beverage selected: Cold Drink\n");
+        }
+        else if (drink == 4) {
+            drinkPrice = 250;
+            printf("Beverage selected: Juice\n");
+        }
+        else if (drink == 5) {
+            drinkPrice = 90;
+            printf("Beverage selected: Water\n");
+        }
+        else {
+            printf("Invalid beverage choice\n");
+        }
+        printf("Enter beverages quantity:");
+        scanf("%d",&drinkQty);
+        totalDrink=drinkPrice*drinkQty;
+
+        grandTotal = (totalFood + totalDrink)- (totalFood+totalDrink);
+
+        printf("\n===== BILL DETAILS =====\n");
+        printf("Food Price     : Rs. %d\n", totalFood);
+        printf("Beverage Price : Rs. %d\n", totalDrink);
+        printf("-------------------------\n");
+        printf("Total Bill (Free meal on internation flights)    : Rs. %d\n", grandTotal);
+    }
+
+    else if (mealChoice == 2) {
+        printf("No meal selected. Grand Bill: Rs. 0");
+    }
+
+    else {
+        printf("Invalid choice!");
+    }
+    }
+
+    else if(flightType == 2){
+        printf("\nMeals are complimentary on International Flights.\n");
+        printf("Do you want to select a flight meal?\n");
+    printf("1. Yes\n");
+    printf("2. No\n");
+    printf("Enter your choice: ");
+    scanf("%d", &mealChoice);
+
+    if (mealChoice == 1) {
+        printf("\n===== FOOD MENU =====\n");
+        printf("1. Upma        - Rs. 300\n");
+        printf("2. Samosa      - Rs. 200\n");
+        printf("3. Sandwich    - Rs. 390\n");
+        printf("4. Cup Noodles - Rs. 340\n");
+        printf("5. Aeronova Special    - Rs. 500\n");
+
+        printf("Enter food choice: ");
+        scanf("%d", &food);
+
+        if (food == 1) {
+            foodPrice = 300;
+            printf("Food selected: Upma\n");
+        }
+        else if (food == 2) {
+            foodPrice = 200;
+            printf("Food selected: Samosa\n");
+        }
+        else if (food == 3) {
+            foodPrice = 390;
+            printf("Food selected: Sandwich\n");
+        }
+        else if (food == 4) {
+            foodPrice = 340;
+            printf("Food selected: Cup Noodles\n");
+        }
+        else if (food == 5) {
+            foodPrice = 500;
+            printf("Food selected: Aeronova Special\n");
+        }
+        else {
+            printf("Invalid food choice\n");
+        }
+        printf("Enter Food quantity:");
+        scanf("%d",&foodQty);
+        totalFood=foodPrice*foodQty;
+
+        printf("\n===== BEVERAGES MENU =====\n");
+        printf("1. Water        - Rs. 110\n");
+        printf("2. Tea          - Rs. 130\n");
+        printf("3. Coffee       - Rs. 200\n");
+        printf("4. Cold Drink   - Rs. 250\n");
+        printf("5. Juice        - Rs. 90\n");
+
+        printf("Enter beverage choice: ");
+        scanf("%d", &drink);
+
+        if (drink == 1) {
+            drinkPrice = 110;
+            printf("Beverage selected: Water\n");
+        }
+        else if (drink == 2) {
+            drinkPrice = 130;
+            printf("Beverage selected: Tea\n");
+        }
+        else if (drink == 3) {
+            drinkPrice = 200;
+            printf("Beverage selected: Coffee\n");
+        }
+        else if (drink == 4) {
+            drinkPrice = 250;
+            printf("Beverage selected: Cold Drink\n");
+        }
+        else if (drink == 5) {
+            drinkPrice = 90;
+            printf("Beverage selected: Juice\n");
+        }
+        else {
+            printf("Invalid beverage choice\n");
+        }
+        printf("Enter beverages quantity:");
+        scanf("%d",&drinkQty);
+        totalDrink=drinkPrice*drinkQty;
+
+        grandTotal = (totalFood + totalDrink)- (totalFood+totalDrink);
+
+        printf("\n===== BILL DETAILS =====\n");
+        printf("Food Price     : Rs. %d\n", totalFood);
+        printf("Beverage Price : Rs. %d\n", totalDrink);
+        printf("-------------------------\n");
+        printf("Total Bill (Free meal on internation flights)    : Rs. %d\n", grandTotal);
+    }
+
+    else if (mealChoice == 2) {
+        printf("No meal selected. Grand Bill: Rs. 0");
+    }
+
+    else {
+        printf("Invalid choice!");
+    }
+    }
 
     return 0;
 }
