@@ -131,6 +131,7 @@ int main() {
         else{
             printf("\nInvalid choice, Only Three Flight Avaliable");
         }
+        
     }
     
     printf("\nThank you, %s. Your booking details have been recorded.\n", name);
