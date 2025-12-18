@@ -194,10 +194,8 @@ int main() {
         } while (strlen(passport) < 6 || strlen(passport) > 9);
     }
 
-    printf("\n=================================\n");
-
-<<<<<<< HEAD
-=======
+    printf("\n=================================\n"
+        
     printf("\nOur Fligts are as follows:\n");
     int location;
     if (flightType == 1) {
