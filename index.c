@@ -195,53 +195,6 @@ int main() {
     }
 
     printf("\n=================================\n"
-        
-    printf("\nOur Fligts are as follows:\n");
-    int location;
-    if (flightType == 1) {
-        printf("1. Ahemdabad to Indore => Time: 2:00 PM - 4:00 PM\n");
-        printf("2. Delhi to Mumbai => Time: 3:30 PM - 5:30 PM\n");
-        printf("3. Goa to Bangolore => Time: 4:15 PM - 6:15 PM\n");
-        printf("Enter your desinestion To & From");
-        scanf("%d", &location);
-        if(location == 1){
-            printf("\nYour Flight is from Ahemdabad to Indore at 2:00 PM ");
-        }
-        else if (location == 2)
-        {
-            printf("\nYour Flight is from Delhi to Mumbai at 3:30 PM");
-        }
-        else if (location == 3)
-        {
-            printf("\nYour Flight is from Goa to Bangolore at 4:15 PM");
-        }
-        else{
-            printf("\nInvalid choice, Only Three Flight Avaliable");
-        }
-
-        
-    } else if (flightType == 2) {
-        printf("1. New York to London => Time: 10:00 AM - 12:00 PM\n");
-        printf("2. India to Tokyo => Time: 11:30 AM - 1:30 PM\n");
-        printf("3. Chicago to India => Time: 2:45 PM - 4:45 PM\n");
-        printf("\nEnter your desinestion To & From (1-3): ");
-        scanf("%d", &location);
-        if(location == 1){
-            printf("\nYour Flight is from New York to London at 10:00 AM ");
-        }
-        else if (location == 2)
-        {
-            printf("\nYour Flight is from India to Tokyo at 11:30 AM");
-        }
-        else if (location == 3)
-        {
-            printf("\nYour  Flight is from Chicago to India at 2:45 PM");
-        }
-        else{
-            printf("\nInvalid choice, Only Three Flight Avaliable");
-        }
-        
-    }
     
     printf("\nThank you, %s. Your booking details have been recorded.\n", name);
 
