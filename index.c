@@ -193,8 +193,11 @@ int main() {
             }
         } while (strlen(passport) < 6 || strlen(passport) > 9);
     }
+
     printf("\n=================================\n");
 
+    printf("\n=================================\n");
+    
     printf("\nThank you, %s. Your booking details have been recorded.\n", name);
 
     printf("\n=================================\n");
@@ -406,6 +409,5 @@ int main() {
     }
     }
 
-    
     return 0;
 }
